@@ -88,6 +88,30 @@
                 -moz-border-radius: 15px;
             }
         </style>
+        <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>        
+        <script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min"></script>
+        <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min"></script>
+        <script type="text/javascript">
+            jQuery(function( $ ) {
+                $('#upcoming').localScroll({
+                    target: '#upcoming',
+                    queue: true,
+                    duration: 1500,
+                    hash: true,
+                    onBefore: function( e, anchor, $target ){},
+                    onAfter: function( anchor, settings ){}
+                });
+                $('#past').localScroll({
+                    target: '#past',
+                    queue: true,
+                    duration: 1500,
+                    hash: true,
+                    onBefore: function( e, anchor, $target ){},
+                    onAfter: function( anchor, settings ){}
+                });
+            });
+        </script>
     </head>
     <body>
         <div class="main">
