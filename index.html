@@ -94,21 +94,25 @@
         <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min"></script>
         <script type="text/javascript">
             jQuery(function( $ ) {
-                $('#upcoming').localScroll({
-                    target: '#upcoming',
-                    queue: true,
-                    duration: 1500,
-                    hash: true,
-                    onBefore: function( e, anchor, $target ){},
-                    onAfter: function( anchor, settings ){}
+                $('#upcoming-nav').click(function(){
+                    $('#upcoming').localScroll({
+                        target: '#upcoming',
+                        queue: true,
+                        duration: 1500,
+                        hash: true,
+                        onBefore: function( e, anchor, $target ){},
+                        onAfter: function( anchor, settings ){}
+                    });
                 });
-                $('#past').localScroll({
-                    target: '#past',
-                    queue: true,
-                    duration: 1500,
-                    hash: true,
-                    onBefore: function( e, anchor, $target ){},
-                    onAfter: function( anchor, settings ){}
+                $('#past-nav').click(function(){
+                    $('#past').localScroll({
+                        target: '#past',
+                        queue: true,
+                        duration: 1500,
+                        hash: true,
+                        onBefore: function( e, anchor, $target ){},
+                        onAfter: function( anchor, settings ){}
+                    });
                 });
             });
         </script>
@@ -120,13 +124,13 @@
             </div>
             <div id="nav">
                 <ul>
-                    <li><a href="#upcoming">Upcoming Events</a></li>
-                    <li><a href="#past">Past Events</a></li>
+                    <li><a id="upcoming-nav" href="#upcoming">Upcoming Events</a></li>
+                    <li><a id="past-nav" href="#past">Past Events</a></li>
                 </ul>
             </div>
             <div id="border"></div>
             <div>
-                <p><a name="past"></a></p>
+                <p><a id="upcoming"></a></p>
                 <p><span style="font-family: 'Lobster', Monoscript; color: #5FFFBF;">Make Something in a New Language</span> with <a href="http://github.com/lexcodes"><span style="font-family: 'Press Start 2P'; font-size:20px; color: #BFBFE8">LexingtonCodes!</span></a></p>
             </div>
             <div>
@@ -139,7 +143,7 @@
             <div id="border"></div>
             <div>
                 <br/>
-                <p><a name="past"<span style="font-size: 34px">Past Events</span></a></p>
+                <p><a id="past"><span style="font-size: 34px">Past Events</span></a></p>
                 <p>Learn &nbsp;<span style="font-family: 'Lobster', Monoscript; color: #5FFFBF; font-size: 40px;">JavaScript</span>&nbsp;&nbsp; with <a href="http://github.com/lexcodes"><span style="font-family: 'Press Start 2P'; font-size:20px; color: #BFBFE8">LexingtonCodes!</span></a></p>
             </div>
             <div>
